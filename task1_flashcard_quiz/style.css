@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+:root { font-family: Inter, Arial, sans-serif; color: #172033; background: #f3f6fc; }
+body { margin: 0; min-height: 100vh; padding: 32px 16px; }
+.app { width: min(760px, 100%); margin: auto; }
+header { text-align: center; margin-bottom: 26px; }
+.eyebrow { color: #536dfe; font-size: .75rem; font-weight: 800; letter-spacing: .18em; }
+h1 { margin: 6px 0; font-size: clamp(2rem, 5vw, 2.8rem); }
+.sub { color: #68738a; margin-top: 8px; }
+.study-panel, .manage-panel { background: white; border: 1px solid #e3e8f2; border-radius: 20px; padding: 24px; box-shadow: 0 12px 35px #25365b0d; margin-bottom: 20px; }
+.topline, .navigation, .form-actions, .card-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.topline { color: #68738a; font-size: .9rem; }
+.progress { height: 7px; background: #edf0f7; border-radius: 20px; margin: 14px 0 22px; overflow: hidden; }
+#progress-fill { height: 100%; width: 0; background: #536dfe; transition: width .2s; }
+.flashcard { min-height: 245px; padding: 30px 20px; border-radius: 16px; background: linear-gradient(145deg, #f5f7ff, #eef1ff); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.card-side { color: #536dfe; font-size: .75rem; font-weight: 800; letter-spacing: .15em; }
+.flashcard h2 { max-width: 540px; font-size: clamp(1.25rem, 3vw, 1.8rem); line-height: 1.45; margin: 20px 0 26px; }
+button { border: 0; border-radius: 10px; padding: 11px 17px; font-weight: 700; cursor: pointer; font-size: .92rem; transition: transform .15s, opacity .15s; }
+button:hover { transform: translateY(-1px); }
+button:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+.primary { color: white; background: #536dfe; }
+.secondary { color: #33415f; background: #edf1fa; }
+.danger { color: #b42332; background: #fff0f1; }
+.navigation { margin-top: 18px; }
+.manage-panel h2 { margin-top: 0; font-size: 1.2rem; }
+label { display: block; font-size: .9rem; font-weight: 700; margin: 14px 0 7px; }
+input, textarea { width: 100%; padding: 12px 13px; border: 1px solid #d9dfeb; border-radius: 10px; font: inherit; color: inherit; }
+input:focus, textarea:focus { outline: 2px solid #c7d0ff; border-color: #536dfe; }
+.form-actions { justify-content: flex-start; margin-top: 14px; }
+.card-actions { justify-content: flex-start; border-top: 1px solid #edf0f5; padding-top: 16px; margin-top: 18px; }
+#message { min-height: 20px; color: #536dfe; font-size: .88rem; }
+footer { text-align: center; color: #8a93a6; font-size: .82rem; padding: 10px; }
+@media (max-width: 480px) { .study-panel, .manage-panel { padding: 17px; } .navigation button { flex: 1; } .card-actions { flex-wrap: wrap; } }

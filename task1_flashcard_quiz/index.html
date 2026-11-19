@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">STUDY SMART</p>
+      <h1>Flashcard Quiz</h1>
+      <p class="sub">Practice, remember, and learn one card at a time.</p>
+    </header>
+
+    <section class="study-panel">
+      <div class="topline">
+        <span id="counter">Card 1 of 3</span>
+        <span id="progress-label">Ready to study</span>
+      </div>
+      <div class="progress"><div id="progress-fill"></div></div>
+
+      <article class="flashcard" aria-live="polite">
+        <span id="card-side" class="card-side">QUESTION</span>
+        <h2 id="card-content">What does HTML stand for?</h2>
+        <button id="show-answer" class="primary">Show Answer</button>
+      </article>
+
+      <div class="navigation">
+        <button id="previous" class="secondary">← Previous</button>
+        <button id="next" class="secondary">Next →</button>
+      </div>
+    </section>
+
+    <section class="manage-panel">
+      <h2>Manage your flashcards</h2>
+      <form id="card-form">
+        <label for="question">Question</label>
+        <input id="question" required maxlength="180" placeholder="Enter a question">
+        <label for="answer">Answer</label>
+        <textarea id="answer" required maxlength="500" rows="3" placeholder="Enter the answer"></textarea>
+        <div class="form-actions">
+          <button class="primary" type="submit" id="save-card">Add Flashcard</button>
+          <button class="secondary" type="button" id="cancel-edit" hidden>Cancel Edit</button>
+        </div>
+      </form>
+      <div class="card-actions">
+        <button id="edit-card" class="secondary">Edit Current</button>
+        <button id="delete-card" class="danger">Delete Current</button>
+      </div>
+      <p id="message" role="status"></p>
+    </section>
+    <footer>Made with HTML, CSS and JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
